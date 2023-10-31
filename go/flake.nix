@@ -18,8 +18,12 @@
     };
     devShells.${system}.default = pkgs.mkShell {
       buildInputs = with pkgs; [
-        alejandra
-        nixd
+        go
+        gopls
+        gotools
+        go-tools
+        golangci-lint
+        gofumpt
       ];
     };
   };
