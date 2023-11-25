@@ -11,13 +11,13 @@
       inherit system;
     };
   in {
-    packages.${system}.project = pkgs.buildGoModule rec {
-      pname = "vid";
-      version = "0.0.1";
+    packages.${system}.myproject = pkgs.buildGoModule rec {
+      pname = "myproject";
+      version = "0.1.0";
       src = ./.;
       vendorHash = null;
     };
-    packages.${system}.default = self.packages.${system}.project;
+    packages.${system}.default = self.packages.${system}.myproject;
     devShells.${system}.default = pkgs.mkShell {
       buildInputs = with pkgs; [
         go
