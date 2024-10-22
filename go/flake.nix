@@ -12,7 +12,7 @@
         pname = "myproject";
         version = "0.1.0";
         src = ./.;
-        vendorHash = null;
+        vendorHash = pkgs.lib.fakeHash;
       };
       packages.${system}.default = myproject;
     };
