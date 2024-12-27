@@ -22,6 +22,9 @@
         go = {
           path = ./go;
         };
+        elixir = {
+          path = ./elixir;
+        };
       }
       // official-templates.templates;
     devShells.${system}.default = pkgs.mkShell {
